@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium digital products - 1000+ AI tools, Excel templates, Canva designs, and fitness courses to boost your productivity">
+    <meta name="keywords" content="AI tools, Excel templates, Canva designs, fitness courses, digital products">
+    <title>DigitalHub | Premium Digital Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --text-color: #333;
+            --bg-color: #fff;
+            --card-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        .dark-mode {
+            --primary-color: #4895ef;
+            --secondary-color: #4361ee;
+            --text-color: #f8f9fa;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --border-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-color);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(63, 55, 201, 0.1) 100%);
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            border-radius: 20px 0 0 20px;
+        }
+
+        /* Features Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            opacity: 0.6;
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.05) 0%, rgba(63, 55, 201, 0.05) 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding-bottom: 15px;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .faq-toggle.active {
+            transform: rotate(45deg);
+        }
+
+        /* Payment Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--bg-color);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        .payment-options {
+            margin-top: 20px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .payment-option:hover {
+            border-color: var(--primary-color);
+        }
+
+        .payment-option img {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .payment-option-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .payment-option-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            padding: 50px 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .download-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .download-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-image {
+                width: 40%;
+                opacity: 0.3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--bg-color);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 40px;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-image {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">DigitalHub</a>
+                <ul class="nav-links">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#features">Benefits</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animate">
+                <h1>Supercharge Your Productivity With Premium Digital Resources</h1>
+                <p>Access 1000+ AI tools, ready-to-use Excel templates, professional Canva designs, and comprehensive fitness courses - all in one place.</p>
+                <a href="#products" class="cta-button">Explore Products</a>
+            </div>
+            <div class="hero-image"></div>
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Why Choose Our Digital Products</h2>
+                <p>We've curated the best resources to save you time and help you achieve more in less time.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Access</h3>
+                    <p>Get immediate download links after payment. No waiting, start using right away.</p>
+                </div>
+                <div class="feature-card animate delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Verified Quality</h3>
+                    <p>Every resource is tested and verified for quality before being added to our collection.</p>
+                </div>
+                <div class="feature-card animate delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Regular Updates</h3>
+                    <p>We continuously update our collections with new and improved resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Our Premium Collections</h2>
+                <p>Choose from our carefully curated digital product bundles.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card animate delay-1">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');"></div>
+                    <div class="product-info">
+                        <h3>1000+ AI Tools Collection</h3>
+                        <p>Comprehensive directory of AI tools for every need - content creation, coding, design, marketing and more.</p>
+                        <div class="product-price">₹499 <span class="original-price">₹1999</span></div>
+                        <button class="cta-button buy-button" data-product="ai-tools">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card animate delay-2">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Excel Templates Bundle</h3>
+                        <p>1000+ ready-to-use Excel templates for business, finance, project management, and personal use.</p>
+                        <div class="product-price">₹399 <span class="original-price">₹1499</span></div>
+                        <button class="cta-button buy-button" data-product="excel-templates">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card animate delay-3">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Canva Templates Pack</h3>
+                        <p>Professional designs for social media, presentations, marketing materials - fully customizable.</p>
+                        <div class="product-price">₹299 <span class="original-price">₹999</span></div>
+                        <button class="cta-button buy-button" data-product="canva-templates">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-card animate delay-4">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="product-info">
+                        <h3>Fitness Courses Bundle</h3>
+                        <p>Comprehensive fitness programs covering workout routines, nutrition plans, and wellness guides.</p>
+                        <div class="product-price">₹599 <span class="original-price">₹2499</span></div>
+                        <button class="cta-button buy-button" data-product="fitness-courses">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear from professionals who've boosted their productivity with our resources.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate delay-1">
+                    <p class="testimonial-text">"The AI tools collection saved me hundreds of hours in research. I found tools I didn't even know existed that are now essential to my workflow."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K." class="author-avatar">
+                        <div class="author-info">
+                            <h4>Sarah K.</h4>
+                            <p>Digital Marketer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-2">
+                    <p class="testimonial-text">"As a small business owner, the Excel templates bundle has been a game-changer. The financial templates alone are worth 10x the price."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rahul M." class="author-avatar">
+                        <div class="author-info">
+                            <h4>Rahul M.</h4>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-3">
+                    <p class="testimonial-text">"The Canva templates helped me elevate my social media presence immediately. My engagement rates have doubled since using these professional designs."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya S." class="author-avatar">
+                        <div class="author-info">
+                            <h4>Priya S.</h4>
+                            <p>Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our digital products.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate delay-1">
+                    <div class="faq-question">
+                        <h3>How do I access the products after purchase?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Immediately after your payment is confirmed, you'll receive an email with download links for all the files in your purchased collection. You can also access them anytime from your account dashboard.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate delay-2">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major UPI payments (GPay, Paytm, PhonePe), credit/debit cards, and net banking. All payments are processed through secure payment gateways.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate delay-3">
+                    <div class="faq-question">
+                        <h3>Can I get a refund if I'm not satisfied?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Due to the digital nature of our products, we offer refunds only in exceptional circumstances. However, we're confident you'll find our collections valuable - if any product doesn't meet your expectations, please contact us and we'll do our best to make it right.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate delay-4">
+                    <div class="faq-question">
+                        <h3>Are these products updated regularly?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We continuously update our collections with new resources. When you purchase a product, you'll receive free updates for one year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Complete Your Purchase</h2>
+            <p id="selected-product-text">You're purchasing: <span id="product-name"></span> for <span id="product-price"></span></p>
+            
+            <div class="payment-options">
+                <h3>Choose Payment Method</h3>
+                
+                <div class="payment-option" data-method="gpay">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Pay_%28GPay%29_Logo.svg/512px-Google_Pay_%28GPay%29_Logo.svg.png" alt="Google Pay">
+                    <div class="payment-option-info">
+                        <h4>Google Pay</h4>
+                        <p>Pay securely with your Google Pay account</p>
+                    </div>
+                </div>
+                
+                <div class="payment-option" data-method="paytm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Paytm_logo.png/640px-Paytm_logo.png" alt="Paytm">
+                    <div class="payment-option-info">
+                        <h4>Paytm</h4>
+                        <p>Pay with Paytm wallet or UPI</p>
+                    </div>
+                </div>
+                
+                <div class="payment-option" data-method="phonepe">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/PhonePe_Logo.svg/2560px-PhonePe_Logo.svg.png" alt="PhonePe">
+                    <div class="payment-option-info">
+                        <h4>PhonePe</h4>
+                        <p>Pay with PhonePe wallet or UPI</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="proceed-payment" class="cta-button" style="width: 100%; margin-top: 20px;">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <!-- Download Modal -->
+    <div class="modal" id="downloadModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Your Purchase is Complete!</h2>
+            <p>Thank you for your purchase. Here are your download links:</p>
+            <div id="download-links"></div>
+            <p style="margin-top: 20px;">We've also sent these links to your email address. If you have any questions, please contact our support team.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DigitalHub</h3>
+                    <p>Providing premium digital resources to help you work smarter and achieve more.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">AI Tools Collection</a></li>
+                        <li><a href="#">Excel Templates</a></li>
+                        <li><a href="#">Canva Designs</a></li>
+                        <li><a href="#">Fitness Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DigitalHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Dark Mode Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            
+            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle');
+                
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
+                toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Scroll Animation
+        const animateElements = document.querySelectorAll('.animate');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animateElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Product Purchase Flow
+        const buyButtons = document.querySelectorAll('.buy-button');
+        const paymentModal = document.getElementById('paymentModal');
+        const downloadModal = document.getElementById('downloadModal');
+        const closeModalButtons = document.querySelectorAll('.close-modal');
+        const productNameElement = document.getElementById('product-name');
+        const productPriceElement = document.getElementById('product-price');
+        const proceedPaymentBtn = document.getElementById('proceed-payment');
+        const downloadLinksElement = document.getElementById('download-links');
+        
+        let selectedProduct = null;
+        
+        // Product data (in a real app, this would come from a database)
+        const products = {
+            'ai-tools': {
+                name: '1000+ AI Tools Collection',
+                price: '₹499',
+                downloadLinks: [
+                    { name: 'AI Tools Master List (Excel)', url: '#' },
+                    { name: 'AI Tools by Category (PDF)', url: '#' },
+                    { name: 'Bonus: AI Productivity Guide', url: '#' }
+                ]
+            },
+            'excel-templates': {
+                name: 'Excel Templates Bundle',
+                price: '₹399',
+                downloadLinks: [
+                    { name: 'Business Templates Pack', url: '#' },
+                    { name: 'Financial Templates Pack', url: '#' },
+                    { name: 'Productivity Templates Pack', url: '#' }
+                ]
+            },
+            'canva-templates': {
+                name: 'Canva Templates Pack',
+                price: '₹299',
+                downloadLinks: [
+                    { name: 'Social Media Templates', url: '#' },
+                    { name: 'Presentation Templates', url: '#' },
+                    { name: 'Marketing Material Templates', url: '#' }
+                ]
+            },
+            'fitness-courses': {
+                name: 'Fitness Courses Bundle',
+                price: '₹599',
+                downloadLinks: [
+                    { name: 'Home Workout Program', url: '#' },
+                    { name: 'Nutrition Guide', url: '#' },
+                    { name: 'Yoga & Mobility Course', url: '#' }
+                ]
+            }
+        };
+        
+        // Open payment modal when buy button is clicked
+        buyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.getAttribute('data-product');
+                selectedProduct = products[productId];
+                
+                productNameElement.textContent = selectedProduct.name;
+                productPriceElement.textContent = selectedProduct.price;
+                
+                paymentModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal when X is clicked
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                paymentModal.style.display = 'none';
+                downloadModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === paymentModal) {
+                paymentModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (e.target === downloadModal) {
+                downloadModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Payment method selection
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        let selectedPaymentMethod = null;
+        
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                paymentOptions.forEach(opt => opt.style.borderColor = 'var(--border-color)');
+                option.style.borderColor = 'var(--primary-color)';
+                selectedPaymentMethod = option.getAttribute('data-method');
+            });
+        });
+        
+        // Proceed to payment (simulated)
+        proceedPaymentBtn.addEventListener('click', () => {
+            if (!selectedPaymentMethod) {
+                alert('Please select a payment method');
+                return;
+            }
+            
+            // In a real app, this would redirect to the payment gateway
+            // For this demo, we'll simulate a successful payment
+            
+            paymentModal.style.display = 'none';
+            
+            // Show download links
+            downloadLinksElement.innerHTML = '';
+            selectedProduct.downloadLinks.forEach(link => {
+                const linkElement = document.createElement('a');
+                linkElement.href = link.url;
+                linkElement.className = 'cta-button download-button';
+                linkElement.textContent = link.name;
+                linkElement.style.display = 'block';
+                linkElement.style.marginBottom = '10px';
+                downloadLinksElement.appendChild(linkElement);
+            });
+            
+            downloadModal.style.display = 'flex';
+        });
+
+        // Accessibility improvements
+        document.addEventListener('keydown', (e) => {
+            // Close modals with ESC key
+            if (e.key === 'Escape') {
+                paymentModal.style.display = 'none';
+                downloadModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Navigate FAQ with keyboard
+            if (e.key === 'Enter' && document.activeElement.classList.contains('faq-question')) {
+                document.activeElement.click();
+            }
+        });
+    </script>
+</body>
+</html>
